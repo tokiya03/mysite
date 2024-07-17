@@ -24,6 +24,10 @@ header, footer {
   height: 70px;
 }
 
+.drawer_open {
+  display: none;
+}
+
 .nav {
   display: flex;
 }
@@ -157,7 +161,7 @@ header, footer {
   margin-right: 10px;
 }
 
-.strength:nth-last-child() {
+.strength:last-child() {
   margin-right: 0;
 }
 
@@ -227,8 +231,20 @@ header, footer {
 .contact-address,
 .contact-sns {
   width: 400px;
+}
+
+.contact-address-content {
+  width: 130px;
+  margin: 0 auto;
   text-align: left;
 }
+
+.contact-sns-content {
+  width: 170px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 
 .contact-title {
   font-size: 20px;
@@ -238,13 +254,13 @@ header, footer {
   padding-top: 5px;
 }
 
-.contact-sns > i {
+.contact-sns-content > i {
   padding-top: 5px;
   font-size: 50px;
   margin-right: 10px;
 }
 
-.sns-icon:nth-last-child() {
+.contact-sns-content > .fa-instagram {
   margin-right: 0;
 }
 
@@ -253,4 +269,163 @@ header, footer {
   font-size: 16px;
   line-height: 60px;
   text-align: center;
+}
+
+/* レスポンシブ対応後の記述 */
+@media screen and (max-width: 767px) {
+  br {
+    display: none;
+  }
+
+  .header-wrapper {
+    height: 50px;
+    width: 90%;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .nav:before {
+    border: 1px solid #fafafa;
+    width: 40px;
+    margin: 5px 0;
+    font-family: "Font Awesome 6 Free";
+    content: '\f0c9';
+    color: #fafafa;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .main-visual {
+    height: 650px;
+    width: 100%;
+    background-image: url(./img/code.png);
+  }
+
+  .mv-title {
+    width: 90%;
+    font-size: 40px;
+    margin: 0 auto;
+  }
+
+  .mv-text {
+    width: 90%;
+    font-size: 18px;
+    margin: 0 auto;
+  }
+
+  .portfolio-content,
+  .feature-content,
+  .profile-content,
+  .contact-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .heading-text {
+    text-align: center;
+  }
+
+  .portfolio-list {
+    width: 90%;
+    margin: 0 auto;
+    display: inline-block;
+  }
+
+  .portfolio-image {
+    height: 250px;
+    width: 300px;
+    margin: 0 auto 10px;
+    text-align: center;
+  }
+
+  .portfolio-image:nth-child(4) {
+    margin-bottom: 10px;
+  }
+
+  .portfolio-image:nth-child(6) {
+    margin: 0 auto;
+  }
+
+  .image1,
+  .image3,
+  .image5 {
+    display: none;
+  }
+
+  .feature-strength {
+    display: inline-block;
+  }
+
+  .strength {
+    width: 320px;
+    margin: 0 auto 10px;
+  }
+
+  .strength:last-child() {
+    margin: 0 auto;
+  }
+
+  .profile-wrapper {
+    display: inline-block;
+  }
+
+  .left-content,
+  .right-content {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .profile-title {
+    padding-top: 20px;
+  }
+
+  .contact-wrapper {
+    display: inline-block;
+  }
+
+  .contact-address {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact-sns {
+    text-align: center;
+  }
+
+  .contact-address-content,
+  .contact-sns-content {
+    text-align: center;
+  }
+
+  .contact-title {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .contact-title:first-child() {
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  .contact-text {
+    color: #000000;
+  }
+
+  .contact-sns-content > i {
+    margin-right: 8px;
+  }
+
+  .contact-sns-content > i:last-child() {
+    margin-right: 0;
+  }
 }
